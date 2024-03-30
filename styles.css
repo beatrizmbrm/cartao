@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #cccaca;
+}
+
+.cartao {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.cartao:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.cartao:hover .frente_cartao {
+  transform: rotateY(-160deg);
+}
+
+.cartao:hover .para {
+  visibility: hidden;
+}
+
+.frente_cartao {
+  position: relative;
+  background-color: #f38ec9;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: .6s;
+}
+
+.para {
+  font-family: Tahoma, sans-serif;
+  color: #f38ec9;
+  text-align: center;
+  margin: 30px;
+  background-color: #bd3434;
+  transition: .1s;
+}
+
+.gatinhos {
+  position: absolute;
+}
+
+.gatinhosImg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 30px;
+  top: 10px;
+}
+
+.dentro_cartao {
+  position: absolute;
+  background-color: #f38ec9;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: 'Brush Script MT', cursive;
+  margin: 20px;
+  color: #333;
+}
+
+.titulo {
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dotted;
+}
